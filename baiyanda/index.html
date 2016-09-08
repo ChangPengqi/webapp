@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>河南百研达信息技术有限公司</title>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.SuperSlide.2.1.1.js"></script>
+<script>
+	$(function(){
+		$('.picList li').mouseenter(function(){
+			var name=$(this).children('.pic').find('img').attr('src').split('.')[0];
+			$(this).children('.pic').find('img').attr('src',name+'_1.png') 
+			
+			})
+		$('.picList li').mouseleave(function(){
+			
+			var name=$(this).children('.pic').find('img').attr('src').split('_')[0];
+			$(this).children('.pic').find('img').attr('src',name+'.png') 
+			
+			})
+	
+
+		var li_w=$('.ban ul li').width();
+		var li_len=$('.ban ul li').length;
+		$('.ban ul').css('width',li_w*li_len);
+		for(var i=0;i<li_len;i++){	
+			$('<span>').appendTo($('.ban p')).text(i+1).css({
+				'width':20,
+				'height':20,
+				'display':'block',
+				'float':'left',
+				
+				
+				});
+			}
+		$('.ban p').css('width',30*li_len).css(' margin','0 auto');
+		$('.ban p span').eq(0).addClass('ac');
+		$('.ban p span').click(function(){
+			var index=$('.ban p span').index(this);
+			$(this).addClass('ac').siblings().removeClass('ac');
+			$('.ban ul').css('-webkit-transform','translateX('+(-index*1920) +'px)').css('-moz-transform','translateX('+(-index*1920) +'px)').css('-ms-transform','translateX('+(-index*1920) +'px)').css('transform','translateX('+(-index*1920) +'px)')
+			})
+		var index=0;
+		var timer=null;
+		autoPlay();
+		function autoPlay(){
+			timer=setInterval(function(){
+			$('.ban ul').css('-webkit-transform','translateX('+(-index*1920) +'px)').css('-moz-transform','translateX('+(-index*1920) +'px)').css('-ms-transform','translateX('+(-index*1920) +'px)').css('transform','translateX('+(-index*1920) +'px)');
+			$('.ban p span').eq(index).addClass('ac').siblings().removeClass('ac');
+			if(index==2){
+				index=-1
+				}
+			index++;
+			},2000)
+			}
+		
+			$('.ban ul').mouseover(function(){
+				clearInterval(timer)
+				})
+			$('.ban ul').mouseout(function(){
+				autoPlay();
+				
+				
+				})
+			
+		})
+</script>
+</head>
+
+<body style="background:#068a99">
+<div class="head">
+	<div class="byd_container">
+        <nav>
+            <img class="logo" src="images/logo.png" height="93"/>
+            <ul>
+            	<li><a href="#">首页</a></li>
+                <li><a href="#">新闻动态</a></li>
+                <li><a href="#">产品服务</a></li>
+                <li><a href="#">成功案例</a></li>
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">关于我们</a></li>
+            </ul>
+        </nav>
+	</div>
+</div>
+<div class="ban">
+    <p></p>
+	<ul>
+    	<li><a href="#"><img src="images/banner.jpg" /></a></li>
+        <li><a href="#"><img src="images/banner.jpg" /></a></li>
+        <li><a href="#"><img src="images/banner.jpg" /></a></li>
+    </ul>
+    
+</div>
+
+<div class="byd_container" >
+	<p class="tit">
+    	<!--<span class="s1">产品服务</span><br />
+		<span class="s2">PRODUCT SERVICE</span>-->
+    </p>
+    <div class="scroll">
+    	<div class="picScroll-left">
+			<div class="hd">
+				<a class="next"></a>
+				<ul></ul>
+				<a class="prev"></a>
+				
+			</div>
+			<div class="bd">
+				<ul class="picList">
+					<li>
+						<div class="pic">
+                        <a href="#" target="_blank"><img src="images/icon2.png"  width="150" height="100"/>
+                        	<p><span class="s1">定制化软件开发服务</span><br />
+<span class="s2">河南百研达信息科技有限公司为您提供专业
+的知识产权服务</span></p>
+                        </a>
+                        
+                        
+                        </div>
+						<div class="title"><a href="#" target="_blank">查看详情</a></div>
+					</li>
+					<li>
+						<div class="pic">
+                        <a href="#" target="_blank"><img src="images/icon1.png"  width="150" height="100"/>
+                        	<p><span class="s1">知识产权服务</span><br />
+<span class="s2">河南百研达信息科技有限公司为您提供专业
+的知识产权服务</span></p>
+                        </a>
+                        
+                        
+                        </div>
+						<div class="title"><a href="#" target="_blank">查看详情</a></div>
+					</li>
+                    <li>
+						<div class="pic">
+                        <a href="#" target="_blank"><img src="images/icon5.png"  width="150" height="100"/>
+                        	<p><span class="s1">百研在线</span><br />
+<span class="s2">河南百研达信息科技有限公司为您提供专业
+的知识产权服务</span></p>
+                        </a>
+                        
+                        
+                        </div>
+						<div class="title"><a href="#" target="_blank">查看详情</a></div>
+					</li>
+                    <li>
+						<div class="pic">
+                        <a href="#" target="_blank"><img src="images/icon4.png"  width="150" height="100"/>
+                        	<p><span class="s1">企业协同办公系统</span><br />
+<span class="s2">河南百研达信息科技有限公司为您提供专业
+的知识产权服务</span></p>
+                        </a>
+                        
+                        
+                        </div>
+						<div class="title"><a href="#" target="_blank">查看详情</a></div>
+					</li>
+                    <li>
+						<div class="pic">
+                        <a href="#" target="_blank"><img src="images/icon3.png"  width="150" height="100"/>
+                        	<p><span class="s1">管理咨询服务</span><br />
+<span class="s2">河南百研达信息科技有限公司为您提供专业
+的知识产权服务</span></p>
+                        </a>
+                        
+                        
+                        </div>
+						<div class="title"><a href="#" target="_blank">查看详情</a></div>
+					</li>
+                   
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"leftLoop",autoPlay:false,vis:3});
+		</script>
+
+    
+    
+    </div>
+
+</div>
+
+<div class="byd_container mode2">
+	<div class="news">
+    <h2></h2>
+    <div class="slideTxtBox t1">
+			<div class="hd">
+
+				<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+				<span class="arrow"><a class="next"></a><a class="prev"></a></span>
+
+				
+			</div>
+			<div class="bd">
+				<ul>
+					<img src="images/img1.jpg" width="205" height="161" />
+                    <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                     <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                      <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                       <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                        <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                        
+                    
+				</ul>
+				<ul>
+					<img src="images/img1.jpg" width="205" height="161" />
+                    <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                     <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                      <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                       <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                        <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                         <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                          <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+				</ul>
+				<ul>
+					<img src="images/img1.jpg" width="205" height="161" />
+                    <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                     <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                      <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                       <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                        <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                         <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+                          <li><a href="#">·SWIFT承认客户端软件存在漏洞</a><span class="date">2016-04-01</span></li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">jQuery(".t1").slide();</script>
+    
+    </div>
+    <div class="cases">
+     <h2></h2>
+    <div class="slideTxtBox  t2">
+			<div class="hd">
+
+				<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+				<span class="arrow"><a class="next"></a><a class="prev"></a></span>
+
+				
+			</div>
+			<div class="bd">
+				<ul>
+					<img src="images/img1_1.jpg" width="205" height="161" />
+                    <dl>
+                    	<dt>关于印发河南省科技金融“科技保”业务实施方案的通知</dt>
+                        <dd>为贯彻落实《河南省人民政府关于创新机制 全方位加大科技创新投入的若干意见》</dd>
+                    </dl>
+                    <dl>
+                    	<dt>关于印发河南省科技金融“科技保”业务实施方案的通知</dt>
+                        <dd>为贯彻落实《河南省人民政府关于创新机制 全方位加大科技创新投入的若干意见》</dd>
+                    </dl>
+				</ul>
+				<ul>
+					<img src="images/img1.jpg" width="205" height="161" />
+                    <dl>
+                    	<dt>关于印发河南省科技金融“科技保”业务实施方案的通知</dt>
+                        <dd>为贯彻落实《河南省人民政府关于创新机制 全方位加大科技创新投入的若干意见》</dd>
+                    </dl>
+                    <dl>
+                    	<dt>关于印发河南省科技金融“科技保”业务实施方案的通知</dt>
+                        <dd>为贯彻落实《河南省人民政府关于创新机制 全方位加大科技创新投入的若干意见》</dd>
+                    </dl>
+				</ul>
+				<ul>
+					<img src="images/img1.jpg" width="205" height="161" />
+                    <dl>
+                    	<dt>关于印发河南省科技金融“科技保”业务实施方案的通知</dt>
+                        <dd>为贯彻落实《河南省人民政府关于创新机制 全方位加大科技创新投入的若干意见》</dd>
+                    </dl>
+                    <dl>
+                    	<dt>关于印发河南省科技金融“科技保”业务实施方案的通知</dt>
+                        <dd>为贯彻落实《河南省人民政府关于创新机制 全方位加大科技创新投入的若干意见》</dd>
+                    </dl>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">jQuery(".t2").slide();</script>
+    </div>
+	<div class="hz">
+    <h2></h2>
+    	<ul>
+        	<li><a href="#">
+            	<img src="images/img2.jpg" width="226" / >
+            </a></li>
+            <li><a href="#">
+            	<img src="images/img3.jpg" width="226" / >
+            </a></li>
+            <li><a href="#">
+            	<img src="images/img2.jpg" width="226" / >
+            </a></li>
+            <li><a href="#">
+            	<img src="images/img3.jpg" width="226" / >
+            </a></li>
+             <li><a href="#">
+            	<img src="images/img2.jpg" width="226" / >
+            </a></li>
+        </ul>
+    </div>
+</div>
+<div class="bot">
+	<div class="byd_container">
+    	
+        <div class="bot_c">
+        
+        
+    	<ul>
+        	<li><a href="#">首页</a></li>
+                <li><a href="#">新闻动态</a>
+                	<div class="sub">
+                    	<a href="#">公司动态</a><br />
+
+                    	<a href="#">国内新闻</a><br />
+
+                        <a href="#">国际新闻</a>
+                       
+                    
+                    </div>
+                </li>
+                <li><a href="#">产品服务</a>
+                	<div class="sub">
+                    	
+
+                    	<a href="#">软件开发服务</a><br />
+                        <a href="#">知识产权服务</a><br />
+                        <a href="#">百研在线</a><br />
+                        <a href="#">企业协同办公系统</a><br />
+
+                        <a href="#">管理咨询服务</a>
+                       
+                    
+                    </div>
+                </li>
+                <li><a href="#">成功案例</a>
+                	<div class="sub">
+                    	<a href="#">系统集成</a><br />
+
+                    	<a href="#">软件开发</a><br />
+
+                   
+                       
+                    
+                    </div>
+                </li>
+                <li><a href="#">加入我们</a>
+                
+                	<div class="sub">
+                    	<a href="#">公司招聘</a><br />
+
+                    	
+                       
+                    
+                    </div>
+                </li>
+                <li><a href="#">关于我们</a>
+                
+                	<div class="sub">
+                    	<a href="#">公司简介</a><br />
+
+                    	<a href="#">企业文化</a><br />
+
+                        <a href="#">发展历程</a>
+                       
+                    
+                    </div>
+                </li>
+        </ul>
+       
+        
+        
+        </div>
+        <div class="phone">
+              <a href="#"><span>666 888</span></a>
+             <p>
+            Copyright © 2016 百研达, All Rights Reserved       豫ICP备16006017号-1<br />
+            地址：河南省郑州经济技术开发区第五大街
+    
+            </p>
+        
+        </div>
+      
+    </div>
+
+</div>
+</body>
+</html>

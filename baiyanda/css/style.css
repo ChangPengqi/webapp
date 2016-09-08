@@ -1,0 +1,164 @@
+@charset "utf-8";
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+	color:#000
+}
+
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 14px/1 'Microsoft Yahei', Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: none;  color:#58a1ef }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+.byd_container{ width:1200px;  margin:0 auto; }
+.head{ width:100%; height:93px; background:#333; min-width:1200px}
+.head .logo{ display:block; float:left; width:350px}
+.head nav ul{ width:600px; height:93px; float:right;}
+.head nav ul li{ float:left;}
+.head nav ul li a{ display:inline-block; width:100px; height:93px; line-height:93px; color:#fff; text-align:center}
+.head nav ul li a:hover{ background:#344144}
+.ban{ width:100%; height:400px; overflow:hidden;min-width:1200px }
+.ban ul{ height:400px; -webkit-transform:translateX(0); -webkit-transition:all ease-in 1s}
+.ban ul li{ width:1920px; float:left; height:400px; margin-top:-20px}
+.ban p{ position:relative; z-index:999; height:20px; margin:0 auto; top:360px}
+.ban p span{ margin-right:10px; color:#fff; text-align:center; line-height:20px; cursor:pointer; background:#ccc}
+.ban p span.ac{ background:#f38925}
+.tit{ text-align:center; line-height:24px; font-size:18px; padding:20px 0; background:url(../images/cp.png) center center no-repeat; height:93px;}
+.tit .s1{ color:#f38925}
+.tit .s2{ color:#565656}
+.news,.cases{ width:50%; float:left}
+
+.news h2,.cases h2,.hz h2{ width:594px; height:32px;  border-bottom:2px solid #04535a}
+.mode2{margin-top:30px}
+.news h2{ background:url(../images/news.png) left  no-repeat; margin-top:15px}
+.cases h2{background:url(../images/case.png) left  no-repeat; margin-top:15px}
+.hz h2{background:url(../images/hz.png) left  no-repeat; width:100%}
+.hz{ clear:both;}
+.hz ul li{ width:226px; float:left;margin:30px 0; margin-right:17px; }
+.hz ul li:last-child{ margin-right:0}
+.bot{ width:100%;  background:#222222; height:190px; clear:both;min-width:1200px}
+.bot .ewm{ display:block; float:left; margin-top:25px}
+.bot_c{ width:600px; float:left; height:140px; margin-top:25px;}
+.bot ul li{ width:100px; float:left; margin-top:10px}
+.bot ul li a{ color:#fff}
+.bot ul li a:hover{ color:#f38925}
+.bot ul li .sub{ line-height:24px; font-size:12px; padding-top:10px}
+.bot_c p{ line-height:24px; color:#fff; margin-top:75px}
+.phone{ float:right; margin-top:25px; }
+.phone p{color:#fff; line-height:24px; clear:both}
+.phone a { float:right; display:block; background:url(../images/phone.jpg) left no-repeat; width:226px; height:57px;}
+.phone a span{ margin-left:130px; top:28px; font-size:18px; color:#ef852f; position:relative}
+.scroll{ position:relative; height:330px}
+.picScroll-left{ width:1100px;  overflow:hidden; position:relative; margin:0 auto; padding:0 50px   }
+.picScroll-left .hd{ height:20px }
+.picScroll-left .hd .prev,.picScroll-left .hd .next{ display:block;  width:45px; height:331px; float:right; 
+			 cursor:pointer; background: #72b6bf url(../images/s_l.png) center no-repeat; position:absolute; left:0; top:20px; z-index:999}
+.picScroll-left .hd .next{ background:#72b6bf url(../images/s_r.png) center no-repeat; left:1155px  }
+.picScroll-left .hd .prevStop{ background-position:-60px 0; }
+.picScroll-left .hd .nextStop{ background-position:-60px -50px; }
+.picScroll-left .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
+.picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("images/icoCircle.gif") 0 -9px no-repeat; }
+.picScroll-left .hd ul li.on{ background-position:0 0; }
+.picScroll-left .bd{ width:100%; margin:0 auto; border:1px solid #f5f5f5; background:#fff  }
+.picScroll-left .bd ul{ overflow:hidden; zoom:1; }
+.picScroll-left .bd ul li{ width:367px; height:289px; float:left; _display:inline; overflow:hidden; text-align:center; padding:20px 0}
+.picScroll-left .bd ul li:hover{ background:#f6f6f6}
+.picScroll-left .bd ul li .pic{ text-align:center; border-right:1px solid #f5f5f5  }
+.picScroll-left .bd ul li .pic a{ display:block; width:100%; height:100%}
+
+.picScroll-left .bd ul li .pic p{ text-align:center; padding:20px 40px; line-height:24px}
+.picScroll-left .bd ul li .pic p .s1{ font-size:20px}
+.picScroll-left .bd ul li .pic p .s2{ color:#b0afaf}
+.picScroll-left .bd ul li .pic img{ width:150px; height:100px; display:block; margin:0 auto; padding-top:20px; -webkit-transition:all ease-in 0.3s; -moz-transition:all ease-in 0.5s; -ms-transition:all ease-in 0.5s; }
+.picScroll-left .bd ul li .pic:hover a img{  padding-top:0px  }
+.picScroll-left .bd ul li .title{ width:150px; height:45px; border:1px solid #ace4ef; text-align:center; line-height:45px; background:#f6f5f5; display:block; margin:0 auto;  border-radius:5px; margin-top:10px; cursor:pointer  }
+.picScroll-left .bd ul li .title a{color:#3ec0da;}
+.picScroll-left .bd ul li .title:hover { background:#3ec0da;}
+.picScroll-left .bd ul li .title:hover a{ color:#fff}
+.slideBox{ width:450px; height:230px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+.slideBox .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+.slideBox .hd ul li.on{ background:#f00; color:#fff; }
+.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+.slideBox .bd li{ zoom:1; vertical-align:middle; }
+.slideBox .bd img{ width:450px; height:230px; display:block;  }
+
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+.slideTxtBox{ width:600px;  }
+.slideTxtBox .hd{ height:30px; line-height:30px;  padding:0 10px 0 20px;  position:relative; }
+.slideTxtBox .hd ul{ float:left;  position:absolute; left:20px; top:-1px; height:32px;   }
+.slideTxtBox .hd ul li{ float:left; padding:0 15px; cursor:pointer;  }.slideTxtBox .hd ul li.on{ height:30px;  background:#fff; border:1px solid #ddd; border-bottom:2px solid #fff; }
+.slideTxtBox .bd ul{ padding:15px;  zoom:1;  }
+.slideTxtBox .bd li{ height:35px; line-height:35px; float:right; width:360px; padding-right:20px   }
+.slideTxtBox .bd li:hover{ background:#12798a}
+.slideTxtBox .bd li a{color:#333}
+.slideTxtBox .bd li a:hover{ }
+.slideTxtBox .bd li .date{ float:right; color:#000;  }
+
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+		.slideTxtBox .arrow{  position:absolute; right:10px; top:0; }
+		.slideTxtBox .arrow a{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;
+			 cursor:pointer; background:url("../images/arrow.png") 0 0 no-repeat; }
+		.slideTxtBox .arrow .next{ background-position:0 -50px;  }
+		.slideTxtBox .arrow .prevStop{ background-position:-60px 0; }
+		.slideTxtBox .arrow .nextStop{ background-position:-60px -50px; }
+		.slideTxtBox .bd ul{ height:200px; padding:0}
+		.slideTxtBox .bd ul img{ width:205px; height:161px; float:left; width:205px; height:161px; margin-right:10px}
+		.slideTxtBox .bd ul dl{ height:90px; padding-right:10px; width:375px; float:right}
+		.slideTxtBox .bd ul dl dt{ font-size:15px; font-weight:bold; margin-bottom:10px}
+		.slideTxtBox .bd ul dl dt a{ color:#000}
+		.slideTxtBox .bd ul dl dt a:hover{ color:#f38925}
+		.slideTxtBox .bd ul dl dd{color:#444; line-height:24px}
